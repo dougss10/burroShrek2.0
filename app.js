@@ -18,14 +18,21 @@ var options = {
         }
     };
 
+var tempo = process.argv[3];
+if (tempo === undefined || tempo === null) {
+  tempo = 1
+}
+console.log("burroShrek2 iniciado, executando a cada " + tempo + " minuto(s)!");
+tempo = tempo * 60 * 1000;
+
 setInterval(function(){
     request(options, function (error, response, body) {
         $ = cheerio.load(body);
         var table = $('table').html();
-    
+
         var status = (table.indexOf('Objeto entregue') != -1) ? 'Chegou!!! \\o/' : 'Ainda não, calmae. :P';
           console.log(status == 'Chegou!!! \\o/' ? status.green : status.red);
-          
+
           fs.appendFile('log.txt', status+' '+ new Date().toString() + '\n', (err) => {
             if (err) {
                 console.log('Erro ao salvar arquivo!');
@@ -33,4 +40,4 @@ setInterval(function(){
             }
           });
     })
-}, 30000);
+}, tempo);
