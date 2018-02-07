@@ -1,0 +1,24 @@
+{
+  "name": "burroshrek2.0",
+  "version": "1.0.0",
+  "description": "Busca por atualizações de status da entraga",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dougss10/burroShrek2.0.git"
+  },
+  "author": "Douglas <douglas@dougss.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dougss10/burroShrek2.0/issues"
+  },
+  "homepage": "https://github.com/dougss10/burroShrek2.0#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "colors": "^1.1.2",
+    "request": "^2.83.0"
+  }
+}
