@@ -3,4 +3,4 @@ Busca status da entrega dos correios.
 
 Modo de uso 
 
-node app.js CODIOG_DE_RASTREIO
+node app.js CODIGO_DE_RASTREIO
